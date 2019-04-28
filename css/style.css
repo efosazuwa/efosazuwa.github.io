@@ -53,3 +53,11 @@
 .titleMessage .heading .sub {
     font-size: 25px;
 }
+
+.section{
+    padding: 100px 0px;
+}
+
+.aboutImage{
+    max-width: 100%;
+}
