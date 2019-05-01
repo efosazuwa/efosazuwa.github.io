@@ -33,16 +33,28 @@ $(document).ready(function() {
         }
     });
 
-    $('.chart').easyPieChart({
-        easing: "easeInOut",
-        barColor: '#fff',
-        trackColor: false,
-        scaleColor: false,
-        lineWidth: 4,
-        size: 150,
-        onStep: function(from, to, percent) {
-            $(this.el).find('.percent').text(Math.round(percent));
+
+
+    //delaying pie chart animation until it is scrolled down to
+    var skillsTopOffset = $(".skillsSection").offset().top;
+
+    $(window).scroll(function() {
+        /* This if statement is basicaly if we get to 200 pixels below the
+        skills sextion then start the javascript code for the pie charts*/
+        if(window.pageYOffset > skillsTopOffset - $(window).height() + 300){
+            $('.chart').easyPieChart({
+                easing: "easeInOut",
+                barColor: '#fff',
+                trackColor: false,
+                scaleColor: false,
+                lineWidth: 4,
+                size: 150,
+                onStep: function(from, to, percent) {
+                    $(this.el).find('.percent').text(Math.round(percent));
+
+                }
+            });
 
         }
-    });
+    })
 });
