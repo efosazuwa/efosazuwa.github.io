@@ -37,6 +37,8 @@ $(document).ready(function() {
 
     //delaying pie chart animation until it is scrolled down to
     var skillsTopOffset = $(".skillsSection").offset().top;
+    var statsTopOffset = $(".statsSection").offset().top;
+    var countUpFinished = false;
 
     $(window).scroll(function() {
         /* This if statement is basicaly if we get to 200 pixels below the
@@ -56,5 +58,18 @@ $(document).ready(function() {
             });
 
         }
-    })
+
+        if(!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 300) {
+            $(".counter").each(function() {
+                var element = $(this);
+                var endVal = parseInt(element.text());
+
+                element.countup(endVal);
+            })
+
+            countUpFinished = true;
+        }
+    });
+
+
 });
