@@ -210,6 +210,11 @@ body {
 }
 
 .itemsContainer {
+    /*
+    fixes if he doesent portfolio display
+    position: relative;
+    left: 100px;
+    */
     width: 100%;
 }
 
