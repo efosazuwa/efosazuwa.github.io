@@ -29,7 +29,8 @@ $(document).ready(function() {
         showCursor: false
     });
 
-    $('.owl-carousel').owlCarousel({
+    var owl = $('.owl-carousel')
+    owl.owlCarousel({
         loop:true,
         items: 4,
         responsive:{
@@ -48,6 +49,14 @@ $(document).ready(function() {
         }
     });
 
+    owl.on('mousewheel', '.owl-stage', function (e) {
+        if (e.deltaY>0) {
+            owl.trigger('next.owl');
+        } else {
+            owl.trigger('prev.owl');
+        }
+        e.preventDefault();
+    });
 
 
     //delaying pie chart animation until it is scrolled down to
