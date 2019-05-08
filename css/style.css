@@ -309,7 +309,7 @@ body {
     right: 0px;
 }
 
-.items .item:hover video{
+.items .item:hover video {
     -webkit-transform: scale(1.05, 1.05);
     -moz-transform: scale(1.05, 1.05);
     -o-transform: scale(1.05, 1.05);
@@ -319,4 +319,14 @@ body {
 
 .items{
     padding: 0;
+}
+
+.copyrightSection {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 5px;
+}
+
+.copyrightSection p {
+    margin: 0;
 }
