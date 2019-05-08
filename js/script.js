@@ -1,3 +1,9 @@
+$(window).on("load", function() {
+
+    $(".loader .inner").fadeOut(1000, function() {
+        $(".loader").fadeOut(500);
+    });
+})
 
 $(document).ready(function() {
     $('#slides').superslides({
