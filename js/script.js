@@ -31,8 +31,13 @@ $(document).ready(function() {
 
     var owl = $('.owl-carousel')
     owl.owlCarousel({
-        loop:true,
-        items: 4,
+        items: 2,
+        dots: true,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        rewind:true,
+        autoplayHoverPause: true,
         responsive:{
             0:{
                 items:1
